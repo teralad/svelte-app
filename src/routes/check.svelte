@@ -1,10 +1,11 @@
 <script>
+
   import Counter from '$lib/Counter.svelte';
-import Header from '$lib/header/Header.svelte';
-import ImageLoader from '../components/Image/ImageLoader.svelte';
-  import Logo from '../components/logo.svelte';
-import About from './about.svelte';
-import Index from './index.svelte';
+  import Header from '$lib/header/Header.svelte';
+  import ImageLoader from '../components/Image/ImageLoader.svelte';
+  import Logo from '../components/Logo.svelte';
+  import About from './about.svelte';
+  import Index from './index.svelte';
   // Generate random number to stop the images caching
   function rand(min, max) {
     let randomNum = Math.random() * (max - min) + min;
@@ -27,7 +28,6 @@ import Index from './index.svelte';
 <p>Scroll to see images fade-in</p>
 
 <Logo></Logo>
-<img src="../../public/img/Decathlon_Logo.svg" alt="Decathlon Logo"/>
 <ul>
   <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
   <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
