@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import Footer from '$lib/footer/Footer.svelte';
 	import '../app.css';
 	// import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 	import { page } from '$app/stores';
@@ -15,7 +16,9 @@
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<Footer>
+
+	</Footer>
 </footer>
 
 <style>
