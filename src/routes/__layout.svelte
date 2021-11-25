@@ -1,9 +1,14 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	// import Breadcrumb from '$lib/components/Breadcrumb.svelte';
+	import { page } from '$app/stores';
+
 </script>
 
-<Header />
+<Header>
+	<!-- <Breadcrumb path={$page.path} /> -->
+</Header>
 
 <main>
 	<slot />

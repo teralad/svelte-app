@@ -1,69 +1,70 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from '../../../static/Decathlon_Logo.svg';
+	import IconButton from '../header/IconButton.svelte';
+	import Search from '../../components/searchbar/Search.svelte';
+	let searchQuery = ''
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<IconButton title="menu" />
+		<a href="http://localhost:3000">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
-			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+    <Search bind:query={searchQuery} />
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<ul>
+			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <IconButton title="contact-us" /> </a></li>
+			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <IconButton title="find-a-store" /> </a></li>
+			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <IconButton title="profile" /> </a></li>
+		</ul>
+		<div class="border">
+			<IconButton title="cart" />
+		</div>
 	</div>
 </header>
 
 <style>
 	header {
 		display: flex;
+		background: #f7f7f7;
+		padding: 20px;
 		justify-content: space-between;
 	}
 
+	img{
+		max-width: 120px;
+	}
+
 	.corner {
-		width: 3em;
-		height: 3em;
+		display: flex;
+		align-items: center;
 	}
 
 	.corner a {
-		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-left: 20px;
 		width: 100%;
 		height: 100%;
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		max-width: 180px;
 		object-fit: contain;
 	}
 
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
+	.border {
+		background: yellow;
+		padding-left: 25px;
+		transform: skewX(-11deg);
+		align-items: center;
 	}
 
 	path {
@@ -98,20 +99,6 @@
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--accent-color);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
 	}
 
 	a:hover {

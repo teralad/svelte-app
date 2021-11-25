@@ -1,6 +1,8 @@
 <script lang="ts">
-  import logo from '../../public/img/Decathlon_Logo.svg';
-  const logoEncoded = `data:image/svg+xml;base64,${encodeURIComponent(logo)}`;
+  import logo from '../../static/Decathlon_Logo.svg';
+  console.log("logo is ", logo)
+  const logoEncoded = `data:image/svg+xml,${encodeURIComponent(logo)}`;
+  console.log("logo encoded is ", logoEncoded)
 </script>
 
 <main>
