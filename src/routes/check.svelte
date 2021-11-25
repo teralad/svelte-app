@@ -1,0 +1,51 @@
+<script>
+  import Counter from '$lib/Counter.svelte';
+import Header from '$lib/header/Header.svelte';
+import ImageLoader from '../components/Image/ImageLoader.svelte';
+  import Logo from '../components/logo.svelte';
+import About from './about.svelte';
+import Index from './index.svelte';
+  // Generate random number to stop the images caching
+  function rand(min, max) {
+    let randomNum = Math.random() * (max - min) + min;
+    return Math.round(randomNum);
+  }
+</script>
+
+<style>
+  li {
+    list-style: none;
+    background: #eee;
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+  }
+</style>
+
+<h2>Image loading demo</h2>
+
+<p>Scroll to see images fade-in</p>
+
+<Logo></Logo>
+<img src="../../public/img/Decathlon_Logo.svg" alt="Decathlon Logo"/>
+<ul>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://picsum.photos/seed/${rand(0,200)}/800/800`} alt="Example image"></ImageLoader></li>
+  <li><ImageLoader src={`https://www.decathlon.co.uk/assets/images/decathlon-logo-GB.png`} alt="Example image"></ImageLoader></li>
+
+</ul>

@@ -36,6 +36,9 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
+		max-width: 1180px;
+		min-width: 320px;
+		margin: 40px auto;
 	}
 
 	h1 {
