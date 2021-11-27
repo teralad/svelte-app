@@ -27,6 +27,5 @@
     margin: auto;
     width: 50%;
     padding: 30px;
-    border: 3px solid green;
   }
 </style>
