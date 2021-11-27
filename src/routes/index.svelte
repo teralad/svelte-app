@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+	import Slider from '../components/slider/Slider.svelte';
 </script>
 
 <svelte:head>
@@ -27,6 +28,7 @@
 	</h2>
 
 	<Counter />
+	<Slider />
 </section>
 
 <style>
