@@ -1,5 +1,49 @@
 @import '@fontsource/fira-mono';
+@font-face{
+	font-family: 'DecathlonIcon';
+	src: url('../../static/fonts/DecathlonCube.eot');
+	src: url('../../static/fonts/DecathlonCube.eot#iefix') format("eot"),  url(../../static/fonts/DecathlonCube.woff) format("woff"), url(../../static/fonts/DecathlonCube.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+.dec-icon{
+	text-transform: uppercase;
+	font-size: 0.7rem;
+}
+.dec-icon::before{
+	font-family: 'DecathlonIcon';
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	color: #575859;
+	font-weight: normal;
+	content: " ";
+	clear: both;
+	display: block;
+	height: 23px;
+}
+.dec-icon-cart::before{
+	content: "\E002";
+}
+.dec-icon-user::before {
+	content: "\E001";
+}
+.dec-icon-search::before {
+	content: "\E003";
+}
 
+.dec-icon-help-line::before {
+	content: "\E024";
+}
+
+.dec-icon-store::before {
+	content: "\E05C";
+}
+.dec-icon-menu::before {
+	content: "\E061";
+}
+.dec-icon-search::before {
+	content: "\E003";
+}
 :root {
 	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -17,15 +61,11 @@
 }
 
 body {
+	font-family: 'Roboto-Condensed', 'Arial Narrow', sans-serif;
 	min-height: 100vh;
 	margin: 0;
-	background-color: var(--primary-color);
-	background: linear-gradient(
-		180deg,
-		var(--primary-color) 0%,
-		var(--secondary-color) 10.45%,
-		var(--tertiary-color) 41.35%
-	);
+	background-color: var(--pure-white);
+	
 }
 
 body::before {
@@ -99,9 +139,70 @@ button {
 button:focus:not(:focus-visible) {
 	outline: none;
 }
-
+.btn{
+	border: 0 solid;
+	font-size: 15px;
+    line-height: 1.1;
+    padding: 10px 30px;
+    min-height: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: text-top;
+    border-radius: 0.1rem;
+    border-radius: 0.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color .2s ease .1s;
+    z-index: 0;
+}
+.btn-yellow{
+	background-color: #ffea28;
+	
+}
 @media (min-width: 720px) {
 	h1 {
 		font-size: 2.4rem;
 	}
 }
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1380px;
+  }
+  @media (min-width: 768px) {
+	.container {
+	  width: 750px;
+	}
+  }
+  @media (min-width: 992px) {
+	.container {
+	  width: 970px;
+	}
+  }
+  @media (min-width: 1200px) {
+	.container {
+	  width: 1170px;
+	}
+  }
+  .sc-carousel-arrow__circle{
+    width: 40px !important;
+    height: 40px !important;
+	border: 3px solid #0082c3;
+	background-color: #ffffff !important;
+  }
+  .clearfix{
+	  clear: both;
+	  content: "";
+	  display: block;
+  }
+  .menuicon{
+	width: 66px;
+ }
