@@ -2,30 +2,27 @@
 	import { page } from '$app/stores';
 	import logo from '../../../static/Decathlon_Logo.svg';
 	import IconButton from '../header/IconButton.svelte';
+	import DecathlonIcon from './DecathlonIcon.svelte';
 	import Search from '../../components/searchbar/Search.svelte';
 	let searchQuery = ''
 </script>
 
 <header>
 	<div class="corner">
-		<IconButton title="menu" />
-		<a href="http://localhost:3000">
+		<IconButton title="menu" className="menuicon" />
+		<a href="http://localhost:3000" class="logo">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
-
-	<nav>
     <Search bind:query={searchQuery} />
-	</nav>
-
 	<div class="corner">
 		<ul>
-			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <IconButton title="contact-us" /> </a></li>
-			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <IconButton title="find-a-store" /> </a></li>
-			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <IconButton title="profile" /> </a></li>
+			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <DecathlonIcon style="" type='help-line' title="CONTACT US" /> </a></li>
+			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <DecathlonIcon style="" type='store' title="FIND A STORE" /> </a></li>
+			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <DecathlonIcon style="" type="user" title="PROFILE" /> </a></li>
 		</ul>
-		<div class="border">
-			<IconButton title="cart" />
+		<div class="mybasket">
+			<DecathlonIcon type="cart" style="" title="My Basket"/>
 		</div>
 	</div>
 </header>
@@ -33,44 +30,66 @@
 <style>
 	header {
 		display: flex;
-		background: #f7f7f7;
-		padding: 20px;
+		
+		padding: 0px;
 		justify-content: space-between;
 	}
-
+	.logo {
+		padding: 10px 10px;
+	}
 	img{
 		max-width: 120px;
 	}
 
 	.corner {
 		display: flex;
-		align-items: center;
 	}
 
 	.corner a {
 		align-items: center;
 		justify-content: center;
-		margin-left: 20px;
 		width: 100%;
 		height: 100%;
+		color: #1a2a34;
 	}
-
+	.corner a:hover,.corner a:visited{
+		color: #1a2a34;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.corner ul{
+		padding: 10px 0;
+	}
+	.corner ul li a span::before{
+		font-size: 30px;
+	}
 	.corner img {
 		max-width: 180px;
 		object-fit: contain;
 	}
 
-	.border {
-		background: yellow;
-		padding-left: 25px;
-		transform: skewX(-11deg);
+	.mybasket {
+		background: #ffea28;
+		padding: 10px 20px;
 		align-items: center;
+		width: 60px;
+		position: relative;
+		text-align: center;
 	}
-
-	path {
-		fill: var(--background);
+	.mybasket::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #ffea28;
+		-webkit-transform: skewX(-10deg);
+		transform: skewX(-10deg);
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+		z-index: -1;
 	}
-
 	ul {
 		position: relative;
 		padding: 0;
@@ -87,6 +106,8 @@
 	li {
 		position: relative;
 		height: 100%;
+		width: 90px;
+		text-align: center;
 	}
 
 	li.active::before {
