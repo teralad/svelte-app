@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import Footer from '$lib/footer/Footer.svelte';
+	import Menu from '$lib/menu/Menu.svelte';
 	import '../app.css';
 	// import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 	import { page } from '$app/stores';
@@ -10,29 +11,16 @@
 <Header>
 	<!-- <Breadcrumb path={$page.path} /> -->
 </Header>
-
+<Menu/>
 <main>
 	<slot />
 </main>
 
 <footer>
-	<Footer>
-
-	</Footer>
+	<Footer/>
 </footer>
 
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
 	footer {
 		display: flex;
 		flex-direction: column;
