@@ -1,10 +1,11 @@
 <script>
   import Icon from './Icon.svelte'
   export let title
+  export let className
 </script>
 
 
-<div class="iconbutton" {title}>
+<div class="iconbutton {className}"  {title}>
   <Icon {title}/>
   <p>
     {title.replaceAll('-', ' ').toUpperCase()}
@@ -14,8 +15,9 @@
 <style>
   .iconbutton {
     justify-content: center;
-    margin: 3px;
+    margin: 10px 10px;
     position: relative;
+    text-align: center;
   }
 
   .iconbutton p {
@@ -23,5 +25,6 @@
     font-size: xx-small;
     font-weight: bold;
     align-content: center;
+    margin: 0;
   }
 </style>
