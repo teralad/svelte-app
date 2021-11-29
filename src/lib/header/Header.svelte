@@ -19,7 +19,7 @@
 		<ul class="mobile-hide">
 			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <DecathlonIcon style="" type='help-line' title="contact us" /> </a></li>
 			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <DecathlonIcon style="" type='store' title="find a store" /> </a></li>
-			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <DecathlonIcon style="" type="user" title="" /> </a></li>
+			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <DecathlonIcon style="" type="user" title="profile" /> </a></li>
 		</ul>
 		<div class="mybasket">
 			<DecathlonIcon type="cart" style="" title="My Basket"/>
