@@ -6,7 +6,8 @@
             <button class="btn btn-yellow">DISCOVER ></button>
         </div>
         <div class="banner-image">
-            <img src="../../../desktopimage.jpg" alt="desktopimage">
+            <img src="../../../banner-mobile.jpg" alt="bannermobileimage" class="mobile-visible">
+            <img src="../../../desktopimage.jpg" alt="desktopimage" class="mobile-hide">
         </div>
     </div>
 </div>
