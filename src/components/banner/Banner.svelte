@@ -16,10 +16,12 @@
 <style>
     .banner-wrapper2 {
         min-width: 320px;
+        width: 100%;
     }
     .banner-content{
         width: 35%;
         float: left;
+        padding-left: 15px;
     }
     .banner-content h1{
         font-size: 4rem;

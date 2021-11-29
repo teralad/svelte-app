@@ -161,14 +161,11 @@ button:focus:not(:focus-visible) {
     z-index: 0;
 }
 .btn-yellow{
-	background-color: #ffea28;
-	
+	background-color: #ffea28;	
 }
 
 
 .container {
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
