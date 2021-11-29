@@ -75,7 +75,6 @@
     -webkit-transform: translateX(-50%);
   }
   .slide-content {
-    /* margin: 5px; */
     width: 300px;
     padding: 10px;
   }
@@ -83,18 +82,15 @@
     width: 100%;
     height: auto;
   }
-
-  .container {
-    max-width: 1380px;
-    margin: 0 auto;
-  }
-
   .seemore {
     text-decoration: underline;
   }
-
   .seemore a {
     color: #0082c3;
   }
-  
+  @media screen  and (max-width:480px){
+    .title{
+      font-size: 18px;
+    }
+  }
 </style>

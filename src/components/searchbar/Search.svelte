@@ -1,4 +1,6 @@
 <script>
+import DecathlonIcon from "$lib/header/DecathlonIcon.svelte";
+
   export let query;
 </script>
 
@@ -40,17 +42,22 @@
     background-color: #fff;
     border-top: 0.1rem solid #d0d5da;
     border-bottom: 0.1rem solid #d0d5da;
-    -webkit-transform: skewX(
--10deg);
-    transform: skewX(
--10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
     -webkit-transform-origin: top left;
     transform-origin: top left;
     left: auto;
     right: -1rem;
     border-right: 0.1rem solid #d0d5da;
   }
-  
+  .search-link{
+    padding-top: 20px;
+  }
+  @media screen and (max-width:480px){
+    .search-form{
+      display: none;
+    }
+  }
 </style>
 
 <div class="search">
@@ -59,4 +66,7 @@
     placeholder="Search For A Product, A Sport or A Brand" />
     <button type="submit" class="search-button dec-icon dec-icon-search"></button>
   </form>
+  <div class="mobile-visible">
+    <a href="#" class="search-link"><DecathlonIcon type="search"/></a>
+  </div>
 </div>
