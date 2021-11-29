@@ -16,10 +16,10 @@
 	</div>
     <Search bind:query={searchQuery} />
 	<div class="corner">
-		<ul>
-			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <DecathlonIcon style="" type='help-line' title="CONTACT US" /> </a></li>
-			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <DecathlonIcon style="" type='store' title="FIND A STORE" /> </a></li>
-			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <DecathlonIcon style="" type="user" title="PROFILE" /> </a></li>
+		<ul class="mobile-hide">
+			<li class:active={$page.path === '/contact-us'}><a sveltekit:prefetch href="/contact-us"> <DecathlonIcon style="" type='help-line' title="contact us" /> </a></li>
+			<li class:active={$page.path === '/find-a-store'}><a sveltekit:prefetch href="/find-a-store"> <DecathlonIcon style="" type='store' title="find a store" /> </a></li>
+			<li class:active={$page.path === '/profile'}><a sveltekit:prefetch href="/profile"> <DecathlonIcon style="" type="user" title="" /> </a></li>
 		</ul>
 		<div class="mybasket">
 			<DecathlonIcon type="cart" style="" title="My Basket"/>
@@ -124,5 +124,10 @@
 
 	a:hover {
 		color: var(--accent-color);
+	}
+	@media screen and (max-width:480px){
+		.mybasket{
+			padding: 10px 5px;
+		}
 	}
 </style>

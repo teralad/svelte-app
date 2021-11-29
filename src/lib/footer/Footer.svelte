@@ -2,21 +2,19 @@
 </script>
 <div class="container">
   <div class="basefooter">
-    <div class="left-footer"></div>
     <div class="center-footer">Over 70 sports to experience</div>
-    <div class="right-footer"></div>
   </div>
 </div>
 <style>
   .basefooter {
     min-width: 290px;
-    min-height: 80px;
-    max-height: 102px;
     width: 100%;
     height: 100%;
     align-content: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background: url("../../../static/footer_image.svg") center center;
+    background-image: url("../../../static/footer_image.svg");
+    background-position:  center center;
   }
 
   .center-footer {
@@ -25,5 +23,12 @@
     margin: auto;
     width: 50%;
     padding: 30px;
+    font-weight: bold;
+  }
+  @media screen  and (max-width:480px){
+    .center-footer{
+      padding: 20px;
+      width: 35%;
+    }
   }
 </style>
