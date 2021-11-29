@@ -62,7 +62,7 @@
 	};
 
   const debouncedSetWindowWidth = debounce(setWindowWidth, 300);
-  
+
   onMount(async () => {
     const module = await import('svelte-carousel');
     Carousel = module.default;
@@ -120,8 +120,7 @@
     height: auto;
   }
   .slide-content img.mobile-icon {
-    width: 20%;
-    
+    width: 45px;
   }
   .slide-content p{
     width: 90%;

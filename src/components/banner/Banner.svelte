@@ -1,18 +1,21 @@
 <div class="banner-wrapper">
-    <div class="container">
+    <div class="container banner-wrapper2">
         <div class="banner-content">
             <h1>Get ready to wrap up</h1>
             <h3>Decathlon, Discover yourself</h3>
             <button class="btn btn-yellow">DISCOVER ></button>
         </div>
         <div class="banner-image">
-            <img src="../../../static/desktopimage.jpg" alt="desktopimage">
+            <img src="../../../desktopimage.jpg" alt="desktopimage">
         </div>
     </div>
 </div>
 <div class="clearfix"></div>
 
 <style>
+    .banner-wrapper2 {
+        min-width: 320px;
+    }
     .banner-content{
         width: 35%;
         float: left;
