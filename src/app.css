@@ -164,18 +164,14 @@ button:focus:not(:focus-visible) {
 	background-color: #ffea28;
 	
 }
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
+
 
 .container {
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 1380px;
+	width: 100%;
   }
   @media (min-width: 768px) {
 	.container {
@@ -192,6 +188,11 @@ button:focus:not(:focus-visible) {
 	  width: 1170px;
 	}
   }
+  @media (min-width: 1400px) {
+	.container {
+		width: 1380px;
+	}
+  }
   .sc-carousel-arrow__circle{
     width: 40px !important;
     height: 40px !important;
@@ -206,3 +207,28 @@ button:focus:not(:focus-visible) {
   .menuicon{
 	width: 66px;
  }
+ .mobile-visible{
+	 display: none;
+ }
+ @media screen and (min-width: 768px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+	.btn{
+		min-height: auto;
+		font-size: 12px;
+		padding: 8px 12px;
+	}
+}
+@media screen  and (max-width:480px){
+	.mobile-visible{
+		display: block;
+	}
+	.mobile-hide{
+		display: none !important;
+	}
+	.btn{
+		font-size: 9px;
+		padding: 5px 10px;
+	}
+}

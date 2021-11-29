@@ -53,4 +53,27 @@
     .banner-image img{
         width: 100%;
     }
+    @media screen and (max-width:1200px){
+        .banner-content h1{
+            font-size: 3rem;
+            margin-top: 10px;
+        }
+        .banner-content h3{
+            font-size: 18px;
+        }
+    }
+    @media screen and (max-width:768px){
+        .banner-content h1{
+            font-size: 1.8rem;
+        }
+    }
+    @media screen and (max-width:480px){
+        .banner-content h1{
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .banner-content h3{
+            font-size: 14px;
+        }
+    }
 </style>
