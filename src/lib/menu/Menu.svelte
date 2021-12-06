@@ -1,11 +1,11 @@
 <nav >
     <ul class="container">
-        <li><a href="#">All Sports</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Kids</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Nutrition & Body Care</a></li>
+        <li><a href="/">All Sports</a></li>
+        <li><a href="/">Men</a></li>
+        <li><a href="/">Women</a></li>
+        <li><a href="/">Kids</a></li>
+        <li><a href="/">Accessories</a></li>
+        <li><a href="/">Nutrition & Body Care</a></li>
     </ul>
 </nav>
 <style>

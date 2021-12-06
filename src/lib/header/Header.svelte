@@ -60,9 +60,6 @@
 	.corner ul{
 		padding: 10px 0;
 	}
-	.corner ul li a span::before{
-		font-size: 30px;
-	}
 	.corner img {
 		max-width: 180px;
 		object-fit: contain;

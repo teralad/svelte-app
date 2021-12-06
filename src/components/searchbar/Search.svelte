@@ -67,6 +67,6 @@ import DecathlonIcon from "$lib/header/DecathlonIcon.svelte";
     <button type="submit" class="search-button dec-icon dec-icon-search"></button>
   </form>
   <div class="mobile-visible">
-    <a href="#" class="search-link"><DecathlonIcon type="search"/></a>
+    <a href="/" class="search-link"><DecathlonIcon type="search"/></a>
   </div>
 </div>
