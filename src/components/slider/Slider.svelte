@@ -6,31 +6,31 @@
 					"name": "Weights",
 					"image": "https://picsum.photos/seed/198/280/210",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu hendrerit turpis",
-          "icon": '/static/weights.svg'
+          "icon": '../../static/weights.svg'
 				},{
 					"id": 2,
 					"name": "product 2",
 					"image": "https://picsum.photos/seed/18/280/210",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu hendrerit turpis",
-          "icon": '/static/weights.svg'
+          "icon": '../../static/weights.svg'
 				},{
 					"id": 3,
 					"name": "product 3",
 					"image": "https://picsum.photos/seed/180/280/210",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu hendrerit turpis",
-          "icon": '/static/weights.svg'
+          "icon": '../../static/weights.svg'
 				},{
 					"id": 4,
 					"name": "product 4",
 					"image": "https://picsum.photos/seed/111/280/210",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu hendrerit turpis",
-          "icon": '/static/weights.svg'
+          "icon": '../../static/weights.svg'
 				},{
 					"id": 5,
 					"name": "product 5",
 					"image": "https://picsum.photos/seed/120/280/210",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu hendrerit turpis",
-          "icon": '/static/weights.svg'
+          "icon": '../../static/weights.svg'
 				}
 		];
 
