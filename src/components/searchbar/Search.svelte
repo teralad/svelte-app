@@ -1,6 +1,5 @@
 <script>
-import DecathlonIcon from "$lib/header/DecathlonIcon.svelte";
-
+  import DecathlonIcon from "../../lib/header/DecathlonIcon.svelte";
   export let query;
 </script>
 

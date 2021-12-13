@@ -63,7 +63,7 @@
 		};
 	};
 
-  const debouncedSetWindowWidth = debounce(setWindowWidth, 300);
+  const debouncedSetWindowWidth = debounce(setWindowWidth, 1);
 
   onMount(async () => {
     const module = await import('svelte-carousel');
@@ -76,8 +76,6 @@
 		}
 
   });
-
-	
 	
 </script>
 
